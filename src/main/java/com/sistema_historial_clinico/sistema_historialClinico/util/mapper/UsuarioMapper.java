@@ -14,14 +14,14 @@ public interface UsuarioMapper {
     // ---- Mapeo Entidad → DTO ----
     @Mappings({
           @Mapping(target = "id", source = "idUsuario"),
-          @Mapping(target = "user", source = "username"),
-          @Mapping(target = "name", source = "nombre"),
-          @Mapping(target = "lastname", source = "apellidos"),
+          @Mapping(target = "usuario", source = "username"),
+          @Mapping(target = "nombre", source = "name"),
+          @Mapping(target = "apellidos", source = "lastname"),
           @Mapping(target = "correo", source = "email"),
           @Mapping(target = "phone", source = "telefono"),
           @Mapping(target = "specialty", source = "especialidad"),
           @Mapping(target = "numbercollegiate", source = "numeroColegiado"),
-          @Mapping(target = "rol", source = "rol"),
+          @Mapping(target = "nombreRol", source = "rol.nombreRol"),
     })
     UsuarioDTO toUsuarioDTOList(Usuario usuario);
     List<UsuarioDTO> toUsuarioDTOList(List<Usuario> usuario);

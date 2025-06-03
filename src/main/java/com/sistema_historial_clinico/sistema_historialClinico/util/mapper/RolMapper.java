@@ -10,8 +10,13 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
 public interface RolMapper {
   //---Mapeo Rol -> Dto
+  @Mappings({
+      @Mapping(source = "idRol", target = "id"),
+      @Mapping(source = "nombreRol", target = "nombre")
+  })
   RolDTO toDTo(Rol rol);
 
+  @InheritInverseConfiguration
   //---Mapeo Dto -> Entidad
   @Mapping(target = "nivelPermisos", ignore = true)
   @Mapping(target = "fechaCreacion", ignore = true)

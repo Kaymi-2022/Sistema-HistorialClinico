@@ -39,8 +39,6 @@ public class UsuarioRepository implements UsuarioDtoRepository {
 
     @Override
     public void eliminarUsuario(int usuarioId) {
-        if (usuarioCrudRepository.existsById(usuarioId)) {
-            usuarioCrudRepository.deleteById(usuarioId);
-        }
+        usuarioCrudRepository.deleteById(usuarioId);
     }
 }

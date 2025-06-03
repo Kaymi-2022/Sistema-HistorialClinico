@@ -1,6 +1,7 @@
 package com.sistema_historial_clinico.sistema_historialClinico.persistence.entity.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.util.Date;
@@ -32,5 +33,51 @@ public class Rol {
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<RolPermiso> rolPermisos;
 
+    public Integer getIdRol() {
+        return idRol;
+    }
 
+    public void setIdRol(Integer idRol) {
+        this.idRol = idRol;
+    }
+
+    public String getNombreRol() {
+        return nombreRol;
+    }
+
+    public void setNombreRol(String nombreRol) {
+        this.nombreRol = nombreRol;
+    }
+
+    public Integer getNivelPermisos() {
+        return nivelPermisos;
+    }
+
+    public void setNivelPermisos(Integer nivelPermisos) {
+        this.nivelPermisos = nivelPermisos;
+    }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public List<RolPermiso> getRolPermisos() {
+        return rolPermisos;
+    }
+
+    public void setRolPermisos(List<RolPermiso> rolPermisos) {
+        this.rolPermisos = rolPermisos;
+    }
 }
