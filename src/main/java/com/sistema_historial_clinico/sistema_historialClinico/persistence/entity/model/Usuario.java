@@ -16,19 +16,13 @@ public class Usuario {
 
     private String username;
 
-    private String password;
-
     private String email;
 
-    private String nombre;
-
-    private String apellidos;
+    private String telefono;
 
     private String numeroColegiado;
 
     private String especialidad;
-
-    private String telefono;
 
     private String fotoPerfil;
 
